@@ -14,7 +14,8 @@ readReadme();
 
 const link = (data) => {
   console.log(data)
-   let regExp = /(http|https):\/\/(\w+:{0,1}\w*)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%!\-\/]))/g;
+   let regExp = /((http:\/\/|https:\/\/|www\.)[^\s]+)/gim;
+ 
    let links = data.match(regExp);
    if(links){console.log(links)}
   else{console.log(error)}
